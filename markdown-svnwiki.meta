@@ -1,0 +1,7 @@
+;; markdown-svnwiki.meta -*- scheme -*-
+
+((synopsis "Convert Markdown to svnwiki")
+ (author "Alex Charlton")
+ (category doc-tools)
+ (license "BSD")
+ (depends lowdown sxml-transforms miscmacros))
