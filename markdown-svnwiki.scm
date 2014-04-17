@@ -32,7 +32,7 @@
   (cons (string->symbol name)
         (lambda (s)
           (irregex-replace/all
-           `(: "    [" ,name "]" (submatch-named def (+ (~ #\newline))) #\newline)
+           `(: "\n    [" ,name "]" (submatch-named def (+ (~ #\newline))) #\newline)
            s
            (lambda (m)
              (string-append "\n<" name ">" (irregex-match-substring m 'def)
