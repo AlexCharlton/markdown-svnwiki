@@ -6,4 +6,4 @@
 (install-extension
  'markdown-svnwiki
  '("markdown-svnwiki.so" "markdown-svnwiki.import.so")
- '((version "0.1.0")))
+ '((version "0.1.1")))

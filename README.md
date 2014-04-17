@@ -77,6 +77,9 @@ This example can be compiled to make a command line program that accepts one arg
 ```
 
 ## Version history
+### Version 0.1.1
+* Fix erroneous newline in code blocks
+
 ### Version 0.1.0
 * Initial release
 
