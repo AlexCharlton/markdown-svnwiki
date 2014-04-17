@@ -51,7 +51,7 @@ Becomes:
 
     <procedure>(my-proc ...)</procedure>
 
-## Examples
+## Example
 This example can be compiled to make a command line program that accepts one argument - a Markdown file - and outputs a svnwiki file into the same directory. It shows the addition of of a pre-processing step - one that removes the first section called "Installation" (fairly indiscriminately, it stops at the first `#`).
 
 ``` Scheme
