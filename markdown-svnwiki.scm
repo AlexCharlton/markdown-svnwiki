@@ -95,6 +95,7 @@
   `((heading . ,(lambda (_ attrs)
                   (list #\newline
                         (make-string (add1 (car attrs)) #\=)
+                        #\space
                         (cadr attrs)
                         #\newline
                         (if (and (= (car attrs) 1) (toc))
