@@ -49,7 +49,7 @@
           (lambda (m)
             (string-append "\n<enscript highlight=\""
                            (irregex-match-substring m 'lang)
-                           "\">\n"
+                           "\">"
                            (irregex-replace/all
                             "\n    " (irregex-match-substring m 'body) "\n")
                            
