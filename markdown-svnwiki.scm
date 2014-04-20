@@ -16,7 +16,7 @@
    `((code-blocks .
       ,(lambda (s)  ; Deal with code blocks (``` lang ... ```)
          (irregex-replace/all
-          '(: "\n```" (+ whitespace)
+          '(: "\n```" (* whitespace)
               (submatch-named lang (+ alphanumeric))
               (submatch-named body (*? any)) "\n```")
           s
