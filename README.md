@@ -77,7 +77,7 @@ This example can be compiled to make a command line program that accepts one arg
 ```
 
 ## Version history
-### Version 0.1.1
+### Version 0.1.2
 * Fix misplaced `@`s in emphasis, strong
 * Accept zero whitespace before language definition of code blocks
 
