@@ -1,7 +1,7 @@
 # markdown-svnwiki
 Converts Markdown to the svnwiki syntax used on the [Chicken wiki](https://wiki.call-cc.org/edit-help). It uses [lowdown](http://wiki.call-cc.org/eggref/4/lowdown) to transform Markdown into SXML before transforming it into svnwiki with [sxml-transforms](http://wiki.call-cc.org/eggref/4/sxml-transforms). Much credit goes to those two libraries, particularly lowdown which heavily influenced the code in markdown-svnwiki.
 
-markdown-svnwiki includes pre and post-processing phases for performing customizable transformations on the input and output. Some transformations, meant to make working with the Chicken wiki more convenient, are included by default. They are described in the section Special Syntax.
+markdown-svnwiki includes pre and post-processing phases for performing customizable transformations on the input and output. Some transformations, meant to make working with the Chicken wiki more convenient, are included by default. They are described in the section [Special Syntax](#special-syntax).
 
 ## Installation
 This repository is a [Chicken Scheme](http://call-cc.org/) egg.
@@ -77,6 +77,10 @@ This example can be compiled to make a command line program that accepts one arg
 ```
 
 ## Version history
+### Version 0.1.1
+* Fix misplaced `@`s in emphasis, strong
+* Accept zero whitespace before language definition of code blocks
+
 ### Version 0.1.1
 * Fix erroneous newline in code blocks
 
