@@ -32,11 +32,11 @@
   (cons (string->symbol name)
         (lambda (s)
           (irregex-replace/all
-           `(: "\n    [" ,name "]" (submatch-named def (+ (~ #\newline))) #\newline)
+           `(: "\n    [" ,name "]" (submatch-named def (+ (~ #\newline))) eol)
            s
            (lambda (m)
              (string-append "\n<" name ">" (irregex-match-substring m 'def)
-                            "</" name ">\n\n"))))))
+                            "</" name ">"))))))
 
 (define post-processing
   (make-parameter
@@ -120,9 +120,11 @@
     (item . ,(lambda (_ contents)
                `(#\space ,@contents #\newline)))
     (verbatim . ,(lambda (_ attrs)
-                   (map (lambda (s)
-                          (map (lambda (s) (list "    " s)) s))
-                        attrs)))
+                   (list
+		    (map (lambda (s)
+			   (map (lambda (s) (list "    " s)) s))
+			 attrs)
+		    #\newline)))
     (code . ,(lambda (_ attrs)
                `("{{" ,@attrs "}}")))
     (emphasis . ,(lambda (_ text)
