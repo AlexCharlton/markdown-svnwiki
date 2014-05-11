@@ -77,17 +77,22 @@ This example can be compiled to make a command line program that accepts one arg
 ```
 
 ## Version history
-### Version 0.1.3
+
+### Version 0.1.4
+11 May 2014
+* Add newlines after lists
+
+**Version 0.1.3**
 * Improve definition post-processing to allow multiple definitions to be placed with a single new line between them
 
-### Version 0.1.2
+**Version 0.1.2**
 * Fix misplaced `@`s in emphasis, strong
 * Accept zero whitespace before language definition of code blocks
 
-### Version 0.1.1
+**Version 0.1.1**
 * Fix erroneous newline in code blocks
 
-### Version 0.1.0
+**Version 0.1.0**
 * Initial release
 
 ## Source repository
