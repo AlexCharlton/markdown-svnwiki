@@ -12,6 +12,18 @@ It is part of the [Chicken egg index](http://wiki.call-cc.org/chicken-projects/e
 * lowdown
 * sxml-transforms
 * miscmacros
+* srfi-37
+
+## Usage
+markdown-svnwiki installs both a module and a command line utility. The command line utility is used as follows:
+
+    usage: markdown-svnwiki [-h | --help]
+                            [-o | --output-file NAME]
+                            [-e | --extension EXTENSION]
+                            [-t | --no-toc]
+                            [file]
+
+Convert the given Markdown file to CHICKEN's svnwiki syntax. If no file is given, stdin is read. If neither the output-file or extension arguments are given, the result is written to stdout. If the output-file argument is provided, the resulting svnwiki file is written to a file of that name. If the extension argument is given, the svnwiki file uses the same name as the input file, with the given extension.
 
 ## Documentation
 
