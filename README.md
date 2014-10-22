@@ -90,8 +90,14 @@ This example can be compiled to make a command line program that accepts one arg
 
 ## Version history
 
+### Version 0.2.0
+22 October 2014
+
+* Add command line utility
+
 ### Version 0.1.4
 11 May 2014
+
 * Add newlines after lists
 
 **Version 0.1.3**

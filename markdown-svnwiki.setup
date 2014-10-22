@@ -1,6 +1,6 @@
 ;; markdown-svnwiki.setup -*- scheme -*-
 
-(define version "0.1.4")
+(define version "0.2.0")
 
 (compile -d0 -O2 -J -s markdown-svnwiki.scm)
 (compile -d0 -O2 -s markdown-svnwiki.import.scm)
