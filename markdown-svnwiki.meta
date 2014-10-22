@@ -4,4 +4,4 @@
  (author "Alex Charlton")
  (category doc-tools)
  (license "BSD")
- (depends lowdown sxml-transforms miscmacros))
+ (depends lowdown sxml-transforms miscmacros srfi-37))
