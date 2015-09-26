@@ -122,7 +122,7 @@
     (verbatim . ,(lambda (_ attrs)
                    (list
 		    (map (lambda (s)
-			   (map (lambda (s) (list "    " s)) s))
+			   (map (lambda (s) (list "    " s)) (if (list? s) s (list s))))
 			 attrs)
 		    #\newline)))
     (code . ,(lambda (_ attrs)
