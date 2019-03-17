@@ -4,8 +4,32 @@
    post-processing
    toc)
 
-(import chicken scheme files irregex data-structures srfi-1 ports extras srfi-13)
-(use lowdown sxml-transforms miscmacros)
+(import scheme)
+
+(cond-expand
+  (chicken-4
+    (import
+      chicken
+      scheme
+      files
+      irregex
+      data-structures
+      srfi-1
+      ports
+      extras
+      srfi-13)
+    (use lowdown sxml-transforms miscmacros))
+  (chicken-5
+    (import
+      (chicken base)
+      (chicken io)
+      (chicken irregex)
+      (chicken port)
+      srfi-1
+      srfi-13
+      lowdown
+      sxml-transforms
+      miscmacros)))
 
 (define references (make-parameter #f))
 
