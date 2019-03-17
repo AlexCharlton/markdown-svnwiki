@@ -1,0 +1,12 @@
+;; markdown-svnwiki.meta -*- scheme -*-
+
+((synopsis "Convert Markdown to svnwiki")
+ (author "Alex Charlton")
+ (category doc-tools)
+ (license "BSD")
+ (dependencies lowdown sxml-transforms miscmacros srfi-1 srfi-13 srfi-37)
+ (components (extension markdown-svnwiki)
+             (program markdown-svnwiki-command
+                      (component-dependencies markdown-svnwiki)
+                      (source "command.scm")
+                      (install-name "markdown-svnwiki"))))
