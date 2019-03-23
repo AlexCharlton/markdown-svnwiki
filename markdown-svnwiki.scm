@@ -56,7 +56,7 @@
   (cons (string->symbol name)
         (lambda (s)
           (irregex-replace/all
-           `(: "\n    [" ,name "]" (submatch-named def (+ (~ #\newline))) eol)
+           `(: "\n    [" ,name "]" (* whitespace) (submatch-named def (+ (~ #\newline))) eol)
            s
            (lambda (m)
              (string-append "\n<" name ">" (irregex-match-substring m 'def)
