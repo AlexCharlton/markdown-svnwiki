@@ -56,7 +56,7 @@
   (cons (string->symbol name)
         (lambda (s)
           (irregex-replace/all
-           `(: "\n    [" ,name "]" (* whitespace) (submatch-named def (+ (~ #\newline))) eol)
+           `(: "\n [" ,name "]" (* whitespace) (submatch-named def (+ (~ #\newline))) eol)
            s
            (lambda (m)
              (string-append "\n<" name ">" (irregex-match-substring m 'def)
@@ -67,16 +67,15 @@
    `((code-blocks .
       ,(lambda (s) ; Convert [lang:xxx] verbatim blocks into <enscript> tags
          (irregex-replace/all
-          '(: "\n    [lang:" (submatch-named lang (+ alphanumeric)) "]\n"
-              (submatch-named body (+ bol "    " (* (~ #\newline)) #\newline)))
+          '(: "\n [lang:" (submatch-named lang (+ alphanumeric)) "]\n"
+              (submatch-named body (+ bol " " (* (~ #\newline)) #\newline)))
           s
           (lambda (m)
             (string-append "\n<enscript highlight=\""
                            (irregex-match-substring m 'lang)
                            "\">"
                            (irregex-replace/all
-                            "\n    " (irregex-match-substring m 'body) "\n")
-                           
+                            "\n " (irregex-match-substring m 'body) "\n")
                            "</enscript>\n")))))
      ,(definition "procedure")
      ,(definition "macro")
@@ -146,7 +145,7 @@
     (verbatim . ,(lambda (_ attrs)
                    (list
 		    (map (lambda (s)
-			   (map (lambda (s) (list "    " s)) (if (list? s) s (list s))))
+			   (map (lambda (s) (list " " s)) (if (list? s) s (list s))))
 			 attrs)
 		    #\newline)))
     (code . ,(lambda (_ attrs)
