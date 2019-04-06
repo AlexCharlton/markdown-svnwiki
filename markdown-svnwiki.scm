@@ -171,7 +171,8 @@
           (loop ((cdar processing) str)
                 (cdr processing)))))
   (let* ([input (if (port? input)
-                    (read-string #f input)
+                    (let ((s (read-string #f input)))
+                      (if (eof-object? s) "" s))
                     input)]
          [string (process (pre-processing) input)])
     (receive (refs sxml) (partition reference-element? (markdown->sxml* string))
