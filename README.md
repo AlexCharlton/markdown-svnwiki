@@ -94,6 +94,12 @@ This example can be compiled to make a command line program that accepts one arg
 
 ## Version history
 
+### Version 0.3.1
+7 April 2019
+
+* Fix error on empty input
+* Remove unnecessary whitespace from tags and code blocks
+
 ### Version 0.3.0
 17 March 2019
 
