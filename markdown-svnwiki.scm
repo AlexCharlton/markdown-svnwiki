@@ -126,7 +126,7 @@
                             '()))))
     (paragraph . ,(lambda (_ attrs)
                     `(,attrs #\newline #\newline)))
-    (br . ,(lambda _ (#\newline #\newline)))
+    (br . ,(lambda _ '(#\newline #\newline)))
     (explicit-link . ,(lambda (_ attrs)
                         (make-link attrs)))
     (reference-link . ,(lambda (_ attrs)
